@@ -1,3 +1,7 @@
+/*
+You have to declare 4 variables a, b, c, d of int, float, double and long long respectively in the main function.
+*/
+
 #include <iostream>
 #include <typeinfo>
 using namespace std;
