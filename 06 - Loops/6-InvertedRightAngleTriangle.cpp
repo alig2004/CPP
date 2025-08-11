@@ -12,27 +12,13 @@ int main() {
     cout << "Enter a number: ";
     cin >> n;
 
-    int i = n;
-
-    //outer loop to control rows
-    while (i > 0) {
-        int j = 1;
-
-        //printing spaces
-        while (j <= n-i) {
-            cout << "  ";
-            j++;
-        }
-
-        //printing stars
-        while (j <= n) {
+    for (int i = n; i>=1; i--) {
+            
+        for (int j = i; j>=1; j--) {
             cout << "* ";
-            j++;
         }
-
-        //moving to new row
+        
         cout << endl;
-        i--;
     }
 
     return 0;
