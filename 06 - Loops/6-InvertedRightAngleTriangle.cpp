@@ -7,14 +7,15 @@ using namespace std;
 
 int main() {
     int n;
-    int i = 1;
 
     //getting size of triangle from user
     cout << "Enter a number: ";
     cin >> n;
 
+    int i = n;
+
     //outer loop to control rows
-    while (i <= n) {
+    while (i > 0) {
         int j = 1;
 
         //printing spaces
@@ -31,7 +32,7 @@ int main() {
 
         //moving to new row
         cout << endl;
-        i++;
+        i--;
     }
 
     return 0;
