@@ -11,6 +11,7 @@ int main() {
     //initialising the first two terms
     a = 1; 
     b = 1;
+    c = 1;
 
     //getting the term to find
     std::cout << "Enter a number: ";
