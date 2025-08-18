@@ -31,7 +31,7 @@ int average(int* a, int s) {
     for (int i=0; i<s; i++) {
 
         //checking if the current element is positive
-        if (a[i] > 0) {
+        if (a[i] >= 0) {
 
             //if it is, increment count and add elements value to sum
             count++;
