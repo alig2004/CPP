@@ -10,28 +10,28 @@ void swapNumbers(int &a, int &b);
 
 
 int main() {
-    int a, b;
+    int x, y;
 
     //getting values from user
     std::cout << "Enter two integers:\n";
-    std::cin >> a;
-    std::cin >> b;
+    std::cin >> x;
+    std::cin >> y;
 
-    std::cout << "\na = " << a;
-    std::cout << "\nb = " << b;
+    std::cout << "\na = " << x;
+    std::cout << "\nb = " << y;
     std::cout << "\nPerforming reverse and swap...";
 
     //reversing the digit order on both digits
-    reverseDigits(a);
-    reverseDigits(b);
+    reverseDigits(x);
+    reverseDigits(y);
 
     //swapping the digits
-    swapNumbers(a, b);
+    swapNumbers(x, y);
 
     //displaying new variables to user
     std::cout << "\n\nReverse and swap performed...";
-    std::cout << "\na = " << a;
-    std::cout << "\nb = " << b;
+    std::cout << "\na = " << x;
+    std::cout << "\nb = " << y;
 
     return 0;
 }
@@ -39,14 +39,13 @@ int main() {
 
 //function to the reverse the digits of an integer
 void reverseDigits(int &a) {
-    int x = a;
     int n = 0;
     
     //looping until b has no digits left
-    while (x>0) {
+    while (a>0) {
 
         //getting the rightmost digit of x
-        int dig = x%10;
+        int dig = a%10;
 
         //multiplying n by 10 to move all digits left a space
         n *= 10;
@@ -55,7 +54,7 @@ void reverseDigits(int &a) {
         n += dig;
 
         //removing rightmost digit of b
-        x /= 10;
+        a /= 10;
     }
 
     //converting s to an integer and replacing the current value of the integer passed in
