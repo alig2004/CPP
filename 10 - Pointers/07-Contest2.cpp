@@ -1,5 +1,5 @@
 /*
-Given an arr, arr[], modify it's values so that each is the product of itself and the next OR'd using bitwise OR
+Given an array, arr[], modify it's values so that each is the product of itself and the next OR'd using bitwise OR
     e.g. arr[0] = arr[0] | arr[1]
          arr[1] = arr[1] | arr[2]
 */
