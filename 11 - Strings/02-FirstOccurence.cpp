@@ -8,7 +8,7 @@ int substring(std::string& txt, std::string& pat);
 
 int main() {
     std::string pat = "He Hell World Hello";
-    std::string txt = "Hello";
+    std::string txt = "Hell";
     int pos;
 
     //storing position found from substring() in pos
@@ -25,10 +25,8 @@ int main() {
 }
 
 int substring(std::string& txt, std::string& pat) {
-    int index;
     int sizeT = txt.length();
     int sizeP = pat.length();
-
 
     //looping through txt
     for (int i=0; i<sizeT; i++) {
@@ -36,26 +34,27 @@ int substring(std::string& txt, std::string& pat) {
         //if first character of pat is found in txt
         if (pat[0] == txt[i]) {
 
-            //store position in index
-            index = i;
+            //if pat only one character long, return i as it is found
+            if (sizeP == 1) {
+                return i;
+            }
 
-            //check for each subsequent letter
+            //otherwise, check for each subsequent letter
             for (int j = 1; j<sizeP; j++) {
 
-                //if a non-match is found, set index back to -1 and break from this loop
+                //if a non-match is found, break from this loop and continue searching
                 if (pat[j] != txt[i+j]) {
-                    index = -1;
                     break;
                 }
 
                 //if the last letter of pat was checked and loop not broken, return index to prevent further searching
                 if (j == sizeP-1) {
-                    return index;
+                    return i;
                 }
             }
         }
     }
 
-    //returning position or -1
-    return index;
+    //returning -1 if nothing was previously returned (i.e. pat not present in txt)
+    return -1;
 }
