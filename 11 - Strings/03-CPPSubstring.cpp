@@ -35,7 +35,7 @@ int main() {
 std::string substring(std::string &s, int L, int R) {
     std::string result = "";
 
-    for (int i=L; i<=R; i++) {
+    for (int i=L; i<=R && i<s.length(); i++) {
         result += s[i];
     }
 
