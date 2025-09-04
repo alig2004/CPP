@@ -23,9 +23,9 @@ Create a class named CollegeCourse.
         - void set_Credit(int cr)
             - Sets credit
         - int calculateGradePoints(char g)
-            - Returns gradePoints
+            - Sets gradePoints
         - float calculateHonourPoints(int gp, int cr)
-            - Returns honourPoints
+            - Sets honorPoints
         - void display()
             - Prints gradePoints and honourPoints
 */
